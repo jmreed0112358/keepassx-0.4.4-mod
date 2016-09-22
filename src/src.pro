@@ -148,6 +148,7 @@ FORMS += forms/AboutDlg.ui \
          forms/EditEntryDlg.ui \
          forms/EditGroupDlg.ui \
          forms/ExpiredEntriesDlg.ui \
+         forms/ExpireAllEntriesDlg.ui \
          forms/HelpDlg.ui \
          forms/MainWindow.ui \
          forms/ManageBookmarksDlg.ui \
@@ -238,6 +239,7 @@ HEADERS += main.h \
            dialogs/EditEntryDlg.h \
            dialogs/EditGroupDlg.h \
            dialogs/ExpiredEntriesDlg.h \
+           dialogs/ExpireAllEntriesDlg.h \
            dialogs/HelpDlg.h \
            dialogs/ManageBookmarksDlg.h \
            dialogs/PasswordDlg.h \
@@ -297,6 +299,7 @@ SOURCES += main.cpp \
            dialogs/EditEntryDlg.cpp \
            dialogs/EditGroupDlg.cpp \
            dialogs/ExpiredEntriesDlg.cpp \
+           dialogs/ExpireAllEntriesDlg.cpp \
            dialogs/HelpDlg.cpp \
            dialogs/ManageBookmarksDlg.cpp \
            dialogs/PasswordDlg.cpp \

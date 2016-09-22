@@ -38,6 +38,7 @@
 #include "dialogs/CollectEntropyDlg.h"
 #include "dialogs/CustomizeDetailViewDlg.h"
 #include "dialogs/ExpiredEntriesDlg.h"
+#include "dialogs/ExpireAllEntriesDlg.h"
 //#include "dialogs/TrashCanDlg.h" //TODO TrashCan
 #include "dialogs/AddBookmarkDlg.h"
 #include "dialogs/ManageBookmarksDlg.h"
@@ -193,6 +194,7 @@ void KeepassMainWindow::setupConnections(){
 	connect(ExtrasSettingsAction,SIGNAL(triggered(bool)),this,SLOT(OnExtrasSettings()));
 	connect(ExtrasPasswordGenAction,SIGNAL(triggered(bool)),this,SLOT(OnExtrasPasswordGen()));
 	connect(ExtrasShowExpiredEntriesAction,SIGNAL(triggered(bool)),this,SLOT(OnExtrasShowExpiredEntries()));
+	connect(ExtrasExpireAllEntriesAction,SIGNAL(triggered(bool)),this,SLOT(OnExtrasExpireAllEntries()));
 	//connect(ExtrasTrashCanAction,SIGNAL(triggered(bool)),this,SLOT(OnExtrasTrashCan())); //TODO ExtrasTrashCan
 
 	connect(HelpHandbookAction,SIGNAL(triggered()),this,SLOT(OnHelpHandbook()));
@@ -1299,6 +1301,15 @@ void KeepassMainWindow::saveLastFilename(const QString& filename){
 
 void KeepassMainWindow::OnExtrasShowExpiredEntries(){
 	ExpiredEntriesDialog dlg(this,db,db->expiredEntries());
+	if(dlg.exec()==QDialog::Accepted){
+		GroupView->setCurrentGroup(dlg.SelectedEntry->group());
+		EntryView->setCurrentEntry(dlg.SelectedEntry);
+	}
+
+}
+
+void KeepassMainWindow::OnExtrasExpireAllEntries(){
+	ExpireAllEntriesDialog dlg(this,db,db->expiredEntries());
 	if(dlg.exec()==QDialog::Accepted){
 		GroupView->setCurrentGroup(dlg.SelectedEntry->group());
 		EntryView->setCurrentEntry(dlg.SelectedEntry);

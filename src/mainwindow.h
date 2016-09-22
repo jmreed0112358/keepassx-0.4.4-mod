@@ -71,6 +71,7 @@ class KeepassMainWindow : public QMainWindow, private Ui_MainWindow{
 		void OnExtrasSettings();
 		void OnExtrasPasswordGen();
 		void OnExtrasShowExpiredEntries();
+		void OnExtrasExpireAllEntries();
 		//void OnExtrasTrashCan(); //TODO TrashCan
 		void OnHelpAbout();
 		void OnHelpHandbook();
