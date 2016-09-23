@@ -26,7 +26,28 @@ ExpireAllEntriesDialog::ExpireAllEntriesDialog(QWidget* parent):QDialog(parent){
 }
 
 void ExpireAllEntriesDialog::expireEntries(IDatabase* database, QList<IEntryHandle*>& Entries) {
+	int ret = 0;
+	QMessageBox msgBox;
+	msgBox.setInformativeText("This function will expire all entries!  Do you want this?");
+	msgBox.setStandardButtons(QMessageBox::No | QMessageBox::Yes);
+	msgBox.setDefaultButton(QMessageBox::No);
+	ret = msgBox.exec();
+
+	switch (ret) {
+		case QMessageBox::Yes:
+			this->executeExpireEntries(database, Entries);
+			break;
+		case QMessageBox::No:
+			break;
+		default:
+			// Shouldn't get here...
+			break;
+	}
+}
+
+void ExpireAllEntriesDialog::executeExpireEntries(IDatabase* database, QList<IEntryHandle*>& Entries) {
 	bool modified = false;
+
 	for(int i=0;i<Entries.size();i++){
 		if (Entries[i]->expire() != Date_Never) {
 			Entries[i]->setExpire(QDate::currentDate().addDays(-1));
@@ -41,10 +62,7 @@ void ExpireAllEntriesDialog::expireEntries(IDatabase* database, QList<IEntryHand
 		item->setText(3,Entries[i]->expire().dateToString(Qt::SystemLocaleDate));
 		item->setIcon(0,database->icon(Entries[i]->group()->image()));
 		item->setIcon(1,database->icon(Entries[i]->image()));
-
 	}
-
-	connect(treeWidget,SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)),this,SLOT(OnItemDoubleClicked(QTreeWidgetItem*)));
 }
 
 void ExpireAllEntriesDialog::paintEvent(QPaintEvent* event){
@@ -57,11 +75,6 @@ void ExpireAllEntriesDialog::paintEvent(QPaintEvent* event){
 void ExpireAllEntriesDialog::resizeEvent(QResizeEvent* event){
 	createBanner(&BannerPixmap,getPixmap("alarmclock"),tr("All entries expired"),width());
 	QDialog::resizeEvent(event);
-}
-
-void ExpireAllEntriesDialog::OnItemDoubleClicked(QTreeWidgetItem* item){
-	SelectedEntry=Entries[item->data(0,Qt::UserRole).toInt()];
-	accept();
 }
 
 ///TODO 0.2.3 locale aware string/date compare for correct sorting

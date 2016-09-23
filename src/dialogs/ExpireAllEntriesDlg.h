@@ -34,12 +34,10 @@ class ExpireAllEntriesDialog:public QDialog, private Ui_ExpireAllEntriesDialog{
 	private:
 		QList<IEntryHandle*> Entries;
 		QPixmap BannerPixmap;
+		void executeExpireEntries(IDatabase* database, QList<IEntryHandle*>& Entries);
 		virtual void paintEvent(QPaintEvent*);
 		virtual void resizeEvent(QResizeEvent *);
 	
-	private slots:
-		void OnItemDoubleClicked(QTreeWidgetItem*);
-
 	signals:
 		void fileModified();	
 	
