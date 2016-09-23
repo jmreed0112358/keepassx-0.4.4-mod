@@ -63,6 +63,10 @@ void ExpireAllEntriesDialog::executeExpireEntries(IDatabase* database, QList<IEn
 		item->setIcon(0,database->icon(Entries[i]->group()->image()));
 		item->setIcon(1,database->icon(Entries[i]->image()));
 	}
+
+	if (modified) {
+		emit fileModified();
+	}
 }
 
 void ExpireAllEntriesDialog::paintEvent(QPaintEvent* event){
