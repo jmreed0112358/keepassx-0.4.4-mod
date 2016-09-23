@@ -43,12 +43,7 @@ void ExpireAllEntriesDialog::expireEntries(IDatabase* database, QList<IEntryHand
 		item->setIcon(1,database->icon(Entries[i]->image()));
 
 	}
-	if (modified) {
-		QMessageBox msgBox;
-		msgBox.setText("About to fire signal.");
-		msgBox.exec();
-		emit fileModified();
-	}
+
 	connect(treeWidget,SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)),this,SLOT(OnItemDoubleClicked(QTreeWidgetItem*)));
 }
 

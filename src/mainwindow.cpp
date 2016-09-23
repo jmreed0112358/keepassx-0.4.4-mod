@@ -1072,9 +1072,6 @@ void KeepassMainWindow::OnUsernPasswVisibilityChanged(){
 }
 
 void KeepassMainWindow::OnFileModified(){
-	QMessageBox msgBox;
-	msgBox.setText("Got fileModified signal");
-	msgBox.exec();
 	setStateFileModified(true);
 }
 
