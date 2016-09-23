@@ -794,6 +794,33 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>ExpireAllEntriesDialog</name>
+    <message>
+        <source>Expired Entries</source>
+        <translation type="unfinished">Süresi Dolmuş Girdiler</translation>
+    </message>
+    <message>
+        <source>Group</source>
+        <translation type="unfinished">Grup</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation type="unfinished">Başlık</translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">Kullanıcı Adı</translation>
+    </message>
+    <message>
+        <source>Expired</source>
+        <translation type="unfinished">Süresi Dolmuş</translation>
+    </message>
+    <message>
+        <source>Entries expired</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ExpiredEntriesDialog</name>
     <message>
         <source>Expired Entries</source>
@@ -1274,24 +1301,40 @@ Anahtar yanlış ya da dosya bozulmuş.</translation>
         <source>The database has been opened read-only.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Bytes</source>
+        <translation type="unfinished">Bayt</translation>
+    </message>
+    <message>
+        <source>KiB</source>
+        <translation type="unfinished">KB</translation>
+    </message>
+    <message>
+        <source>MiB</source>
+        <translation type="unfinished">MB</translation>
+    </message>
+    <message>
+        <source>GiB</source>
+        <translation type="unfinished">GB</translation>
+    </message>
 </context>
 <context>
     <name>Kdb3Database::EntryHandle</name>
     <message>
         <source>Bytes</source>
-        <translation>Bayt</translation>
+        <translation type="obsolete">Bayt</translation>
     </message>
     <message>
         <source>KiB</source>
-        <translation>KB</translation>
+        <translation type="obsolete">KB</translation>
     </message>
     <message>
         <source>MiB</source>
-        <translation>MB</translation>
+        <translation type="obsolete">MB</translation>
     </message>
     <message>
         <source>GiB</source>
-        <translation>GB</translation>
+        <translation type="obsolete">GB</translation>
     </message>
 </context>
 <context>
@@ -1935,6 +1978,10 @@ Değişiklikleri kaydetmek ister misiniz?</translation>
     </message>
     <message>
         <source>&amp;Minimize Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Expire All Entries...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

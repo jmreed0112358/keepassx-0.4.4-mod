@@ -790,6 +790,33 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>ExpireAllEntriesDialog</name>
+    <message>
+        <source>Expired Entries</source>
+        <translation type="unfinished">Položky s uplynutou dobou platnosti</translation>
+    </message>
+    <message>
+        <source>Group</source>
+        <translation type="unfinished">Skupina</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">Meno používateľa</translation>
+    </message>
+    <message>
+        <source>Expired</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entries expired</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ExpiredEntriesDialog</name>
     <message>
         <source>Expired Entries in the Database</source>
@@ -1226,24 +1253,40 @@ The key is wrong or the file is damaged.</translation>
         <source>The database has been opened read-only.</source>
         <translation>Databáza bola otvorená iba v režime na čítanie.</translation>
     </message>
+    <message>
+        <source>Bytes</source>
+        <translation type="unfinished">Bajty</translation>
+    </message>
+    <message>
+        <source>KiB</source>
+        <translation type="unfinished">KiB</translation>
+    </message>
+    <message>
+        <source>MiB</source>
+        <translation type="unfinished">MiB</translation>
+    </message>
+    <message>
+        <source>GiB</source>
+        <translation type="unfinished">GiB</translation>
+    </message>
 </context>
 <context>
     <name>Kdb3Database::EntryHandle</name>
     <message>
         <source>Bytes</source>
-        <translation>Bajty</translation>
+        <translation type="obsolete">Bajty</translation>
     </message>
     <message>
         <source>KiB</source>
-        <translation>KiB</translation>
+        <translation type="obsolete">KiB</translation>
     </message>
     <message>
         <source>MiB</source>
-        <translation>MiB</translation>
+        <translation type="obsolete">MiB</translation>
     </message>
     <message>
         <source>GiB</source>
-        <translation>GiB</translation>
+        <translation type="obsolete">GiB</translation>
     </message>
 </context>
 <context>
@@ -1861,6 +1904,10 @@ Do you want to save the changes?</source>
     </message>
     <message>
         <source>&amp;Minimize Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Expire All Entries...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

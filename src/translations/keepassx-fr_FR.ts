@@ -1297,6 +1297,33 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>ExpireAllEntriesDialog</name>
+    <message>
+        <source>Expired Entries</source>
+        <translation type="unfinished">Entrées expirées</translation>
+    </message>
+    <message>
+        <source>Group</source>
+        <translation type="unfinished">Groupe</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation type="unfinished">Títre</translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">Nom d&apos;utilisateur</translation>
+    </message>
+    <message>
+        <source>Expired</source>
+        <translation type="unfinished">Expiré</translation>
+    </message>
+    <message>
+        <source>Entries expired</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ExpiredEntriesDialog</name>
     <message>
         <source>Expired Entries</source>
@@ -1833,24 +1860,40 @@ La clé est mauvaise ou le fichier est endommagé.</translation>
         <source>Unable to initalize the twofish algorithm.</source>
         <translation type="obsolete">Impossible d&apos;initialiser l&apos;algorithme twofish.</translation>
     </message>
+    <message>
+        <source>Bytes</source>
+        <translation type="unfinished">Octets</translation>
+    </message>
+    <message>
+        <source>KiB</source>
+        <translation type="unfinished">kio</translation>
+    </message>
+    <message>
+        <source>MiB</source>
+        <translation type="unfinished">Mio</translation>
+    </message>
+    <message>
+        <source>GiB</source>
+        <translation type="unfinished">Gio</translation>
+    </message>
 </context>
 <context>
     <name>Kdb3Database::EntryHandle</name>
     <message>
         <source>Bytes</source>
-        <translation>Octets</translation>
+        <translation type="obsolete">Octets</translation>
     </message>
     <message>
         <source>KiB</source>
-        <translation>kio</translation>
+        <translation type="obsolete">kio</translation>
     </message>
     <message>
         <source>MiB</source>
-        <translation>Mio</translation>
+        <translation type="obsolete">Mio</translation>
     </message>
     <message>
         <source>GiB</source>
-        <translation>Gio</translation>
+        <translation type="obsolete">Gio</translation>
     </message>
 </context>
 <context>
@@ -2797,6 +2840,10 @@ Do you want to save the changes?</source>
     </message>
     <message>
         <source>&amp;Minimize Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Expire All Entries...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

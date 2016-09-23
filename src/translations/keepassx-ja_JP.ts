@@ -1122,6 +1122,33 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>ExpireAllEntriesDialog</name>
+    <message>
+        <source>Expired Entries</source>
+        <translation type="unfinished">有効期限切れのエントリー</translation>
+    </message>
+    <message>
+        <source>Group</source>
+        <translation type="unfinished">グループ</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation type="unfinished">タイトル</translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">ユーザー名</translation>
+    </message>
+    <message>
+        <source>Expired</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entries expired</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ExpiredEntriesDialog</name>
     <message>
         <source>Expried Entries of the Database</source>
@@ -1644,25 +1671,6 @@ The key is wrong or the file is damaged.</source>
     </message>
     <message>
         <source>Bytes</source>
-        <translation type="obsolete">バイト</translation>
-    </message>
-    <message>
-        <source>KiB</source>
-        <translation type="obsolete">KiB</translation>
-    </message>
-    <message>
-        <source>MiB</source>
-        <translation type="obsolete">MiB</translation>
-    </message>
-    <message>
-        <source>GiB</source>
-        <translation type="obsolete">GiB</translation>
-    </message>
-</context>
-<context>
-    <name>Kdb3Database::EntryHandle</name>
-    <message>
-        <source>Bytes</source>
         <translation type="unfinished">バイト</translation>
     </message>
     <message>
@@ -1676,6 +1684,25 @@ The key is wrong or the file is damaged.</source>
     <message>
         <source>GiB</source>
         <translation type="unfinished">GiB</translation>
+    </message>
+</context>
+<context>
+    <name>Kdb3Database::EntryHandle</name>
+    <message>
+        <source>Bytes</source>
+        <translation type="obsolete">バイト</translation>
+    </message>
+    <message>
+        <source>KiB</source>
+        <translation type="obsolete">KiB</translation>
+    </message>
+    <message>
+        <source>MiB</source>
+        <translation type="obsolete">MiB</translation>
+    </message>
+    <message>
+        <source>GiB</source>
+        <translation type="obsolete">GiB</translation>
     </message>
 </context>
 <context>
@@ -2598,6 +2625,10 @@ Do you want to save the changes?</source>
     <message>
         <source>&amp;Minimize Window</source>
         <translation>ウインドウ最小化(&amp;M)</translation>
+    </message>
+    <message>
+        <source>Expire All Entries...</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

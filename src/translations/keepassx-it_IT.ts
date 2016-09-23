@@ -850,6 +850,33 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>ExpireAllEntriesDialog</name>
+    <message>
+        <source>Expired Entries</source>
+        <translation type="unfinished">Voce scaduta</translation>
+    </message>
+    <message>
+        <source>Group</source>
+        <translation type="unfinished">Gruppo</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation type="unfinished">Titolo</translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">Nome utente</translation>
+    </message>
+    <message>
+        <source>Expired</source>
+        <translation type="unfinished">Scaduta</translation>
+    </message>
+    <message>
+        <source>Entries expired</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ExpiredEntriesDialog</name>
     <message>
         <source>Expired Entries</source>
@@ -1346,24 +1373,40 @@ La chiave è errata oppure il file è danneggiato.</translation>
         <source>The database has been opened read-only.</source>
         <translation>Il database è stato aperto in sola lettura.</translation>
     </message>
+    <message>
+        <source>Bytes</source>
+        <translation type="unfinished">Bytes</translation>
+    </message>
+    <message>
+        <source>KiB</source>
+        <translation type="unfinished">KB</translation>
+    </message>
+    <message>
+        <source>MiB</source>
+        <translation type="unfinished">MB</translation>
+    </message>
+    <message>
+        <source>GiB</source>
+        <translation type="unfinished">GB</translation>
+    </message>
 </context>
 <context>
     <name>Kdb3Database::EntryHandle</name>
     <message>
         <source>Bytes</source>
-        <translation>Bytes</translation>
+        <translation type="obsolete">Bytes</translation>
     </message>
     <message>
         <source>KiB</source>
-        <translation>KB</translation>
+        <translation type="obsolete">KB</translation>
     </message>
     <message>
         <source>MiB</source>
-        <translation>MB</translation>
+        <translation type="obsolete">MB</translation>
     </message>
     <message>
         <source>GiB</source>
-        <translation>GB</translation>
+        <translation type="obsolete">GB</translation>
     </message>
 </context>
 <context>
@@ -2023,6 +2066,10 @@ Do you want to save the changes?</source>
     </message>
     <message>
         <source>&amp;Minimize Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Expire All Entries...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

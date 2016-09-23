@@ -789,6 +789,33 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>ExpireAllEntriesDialog</name>
+    <message>
+        <source>Expired Entries</source>
+        <translation type="unfinished">Записи, термін дії яких закінчився</translation>
+    </message>
+    <message>
+        <source>Group</source>
+        <translation type="unfinished">Група</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation type="unfinished">Назва</translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">Ім&apos;я користувача</translation>
+    </message>
+    <message>
+        <source>Expired</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entries expired</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ExpiredEntriesDialog</name>
     <message>
         <source>Expired Entries in the Database</source>
@@ -1224,24 +1251,40 @@ The key is wrong or the file is damaged.</source>
         <source>The database has been opened read-only.</source>
         <translation>База даних відкрита тільки для читання.</translation>
     </message>
+    <message>
+        <source>Bytes</source>
+        <translation type="unfinished">байт</translation>
+    </message>
+    <message>
+        <source>KiB</source>
+        <translation type="unfinished">кБ</translation>
+    </message>
+    <message>
+        <source>MiB</source>
+        <translation type="unfinished">МБ</translation>
+    </message>
+    <message>
+        <source>GiB</source>
+        <translation type="unfinished">ГБ</translation>
+    </message>
 </context>
 <context>
     <name>Kdb3Database::EntryHandle</name>
     <message>
         <source>Bytes</source>
-        <translation>байт</translation>
+        <translation type="obsolete">байт</translation>
     </message>
     <message>
         <source>KiB</source>
-        <translation>кБ</translation>
+        <translation type="obsolete">кБ</translation>
     </message>
     <message>
         <source>MiB</source>
-        <translation>МБ</translation>
+        <translation type="obsolete">МБ</translation>
     </message>
     <message>
         <source>GiB</source>
-        <translation>ГБ</translation>
+        <translation type="obsolete">ГБ</translation>
     </message>
 </context>
 <context>
@@ -1860,6 +1903,10 @@ Do you want to save the changes?</source>
     </message>
     <message>
         <source>&amp;Minimize Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Expire All Entries...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

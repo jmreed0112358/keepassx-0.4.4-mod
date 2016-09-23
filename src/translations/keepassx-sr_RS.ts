@@ -830,6 +830,33 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>ExpireAllEntriesDialog</name>
+    <message>
+        <source>Expired Entries</source>
+        <translation type="unfinished">Istekle stavke</translation>
+    </message>
+    <message>
+        <source>Group</source>
+        <translation type="unfinished">Grupa</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation type="unfinished">Naslov</translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">Korisničko ime</translation>
+    </message>
+    <message>
+        <source>Expired</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entries expired</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ExpiredEntriesDialog</name>
     <message>
         <source>Expired Entries in the Database</source>
@@ -1266,24 +1293,40 @@ Ključ je pogrešan ili je datoteka oštećena.</translation>
         <source>The database has been opened read-only.</source>
         <translation>Baza podataka je otvorena samo za čitanje.</translation>
     </message>
+    <message>
+        <source>Bytes</source>
+        <translation type="unfinished">Bajtova</translation>
+    </message>
+    <message>
+        <source>KiB</source>
+        <translation type="unfinished">KB</translation>
+    </message>
+    <message>
+        <source>MiB</source>
+        <translation type="unfinished">MB</translation>
+    </message>
+    <message>
+        <source>GiB</source>
+        <translation type="unfinished">GB</translation>
+    </message>
 </context>
 <context>
     <name>Kdb3Database::EntryHandle</name>
     <message>
         <source>Bytes</source>
-        <translation>Bajtova</translation>
+        <translation type="obsolete">Bajtova</translation>
     </message>
     <message>
         <source>KiB</source>
-        <translation>KB</translation>
+        <translation type="obsolete">KB</translation>
     </message>
     <message>
         <source>MiB</source>
-        <translation>MB</translation>
+        <translation type="obsolete">MB</translation>
     </message>
     <message>
         <source>GiB</source>
-        <translation>GB</translation>
+        <translation type="obsolete">GB</translation>
     </message>
 </context>
 <context>
@@ -1905,6 +1948,10 @@ Da li želite da sačuvate izmene?</translation>
     </message>
     <message>
         <source>&amp;Minimize Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Expire All Entries...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
