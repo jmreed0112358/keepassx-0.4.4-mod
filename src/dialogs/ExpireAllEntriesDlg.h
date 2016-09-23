@@ -22,12 +22,13 @@
 #define _EXP_ALL_ENTRIES_DLG_
 
 #include "ui_ExpireAllEntriesDlg.h"
+#include "Kdb3Database.h"
 
 
 class ExpireAllEntriesDialog:public QDialog, private Ui_ExpireAllEntriesDialog{
 	Q_OBJECT
 	public:
-		ExpireAllEntriesDialog(QWidget* parent,IDatabase* database,const QList<IEntryHandle*>& Entries);
+		ExpireAllEntriesDialog(QWidget* parent, IDatabase* database, QList<IEntryHandle*>& Entries);
 		IEntryHandle* SelectedEntry;		
 	private:
 		QList<IEntryHandle*> Entries;
@@ -37,7 +38,9 @@ class ExpireAllEntriesDialog:public QDialog, private Ui_ExpireAllEntriesDialog{
 	
 	private slots:
 		void OnItemDoubleClicked(QTreeWidgetItem*);
-	
+
+	signals:
+		void fileModified();	
 	
 };
 

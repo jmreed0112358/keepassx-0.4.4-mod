@@ -223,6 +223,7 @@
     </property>
     <addaction name="ExtrasPasswordGenAction"/>
     <addaction name="ExtrasShowExpiredEntriesAction"/>
+    <addaction name="ExtrasExpireAllEntriesAction"/>
     <addaction name="ExtrasTrashCanAction"/>
     <addaction name="separator"/>
     <addaction name="ExtrasSettingsAction"/>
@@ -548,6 +549,11 @@
   <action name="ExtrasShowExpiredEntriesAction">
    <property name="text">
     <string>Show &amp;Expired Entries...</string>
+   </property>
+  </action>
+  <action name="ExtrasExpireAllEntriesAction">
+   <property name="text">
+    <string>Expire All Entries...</string>
    </property>
   </action>
   <action name="ExtrasTrashCanAction">

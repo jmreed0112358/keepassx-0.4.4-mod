@@ -205,6 +205,7 @@ void KeepassMainWindow::setupConnections(){
 	connect(GroupView,SIGNAL(groupChanged(IGroupHandle*)),this,SLOT(OnGroupSelectionChanged(IGroupHandle*)));
 	connect(GroupView,SIGNAL(fileModified()),this,SLOT(OnFileModified()));
 	connect(EntryView,SIGNAL(fileModified()),this,SLOT(OnFileModified()));
+	connect(ExpireAllEntriesDialog,SIGNAL(fileModified()),this,SLOT(OnFileModified()));
 	connect(EntryView,SIGNAL(selectionChanged(SelectionState)),this,SLOT(OnEntryChanged(SelectionState)));
 	connect(GroupView,SIGNAL(searchResultsSelected()),EntryView,SLOT(OnShowSearchResults()));
 	connect(GroupView,SIGNAL(searchResultsSelected()),this,SLOT(OnShowSearchResults()));
@@ -270,6 +271,7 @@ void KeepassMainWindow::setupIcons(){
 	EditSearchAction->setIcon(getIcon("dbsearch"));
 	EditGroupSearchAction->setIcon(getIcon("groupsearch"));
 	ExtrasShowExpiredEntriesAction->setIcon(getIcon("expired"));
+	ExtrasExpireAllEntriesAction->setIcon(getIcon("expired"));
 	ExtrasPasswordGenAction->setIcon(getIcon("generator"));
 	//ExtrasTrashCanAction->setIcon(getIcon("trashcan")); //TODO ExtrasTrashCan
 	ExtrasSettingsAction->setIcon(getIcon("appsettings"));
@@ -649,6 +651,7 @@ void KeepassMainWindow::setStateFileOpen(bool IsOpen){
 	DetailView->setEnabled(IsOpen);
 	QuickSearchEdit->setEnabled(IsOpen);
 	ExtrasShowExpiredEntriesAction->setEnabled(IsOpen);
+	ExtrasExpireAllEntriesAction->setEnabled(IsOpen);	
 	AddThisAsBookmarkAction->setEnabled(IsOpen && db->file());
 	FileUnLockWorkspaceAction->setEnabled(IsOpen||IsLocked);
 	
@@ -1070,6 +1073,9 @@ void KeepassMainWindow::OnUsernPasswVisibilityChanged(){
 }
 
 void KeepassMainWindow::OnFileModified(){
+	QMessageBox msgBox;
+	msgBox.setText("Got fileModified signal");
+	msgBox.exec();
 	setStateFileModified(true);
 }
 
@@ -1309,7 +1315,8 @@ void KeepassMainWindow::OnExtrasShowExpiredEntries(){
 }
 
 void KeepassMainWindow::OnExtrasExpireAllEntries(){
-	ExpireAllEntriesDialog dlg(this,db,db->expiredEntries());
+	QList<IEntryHandle*> entries = db->entries();
+	ExpireAllEntriesDialog dlg(this,db,entries);
 	if(dlg.exec()==QDialog::Accepted){
 		GroupView->setCurrentGroup(dlg.SelectedEntry->group());
 		EntryView->setCurrentEntry(dlg.SelectedEntry);

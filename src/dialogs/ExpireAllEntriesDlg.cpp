@@ -21,10 +21,15 @@
 
 #include "ExpireAllEntriesDlg.h"
 
-ExpireAllEntriesDialog::ExpireAllEntriesDialog(QWidget* parent,IDatabase* database,const QList<IEntryHandle*>& ExpiredEntries):QDialog(parent){
+ExpireAllEntriesDialog::ExpireAllEntriesDialog(QWidget* parent,IDatabase* database,QList<IEntryHandle*>& Entries):QDialog(parent){
 	setupUi(this);
-	Entries=ExpiredEntries;
+	bool modified = false;
 	for(int i=0;i<Entries.size();i++){
+		if (Entries[i]->expire() != Date_Never) {
+			Entries[i]->setExpire(QDate::currentDate().addDays(-1));
+			modified = true;
+		}
+
 		QTreeWidgetItem* item=new QTreeWidgetItem(treeWidget);
 		item->setData(0,Qt::UserRole,i);
 		item->setText(0,Entries[i]->group()->title());
@@ -34,6 +39,12 @@ ExpireAllEntriesDialog::ExpireAllEntriesDialog(QWidget* parent,IDatabase* databa
 		item->setIcon(0,database->icon(Entries[i]->group()->image()));
 		item->setIcon(1,database->icon(Entries[i]->image()));
 
+	}
+	if (modified) {
+		QMessageBox msgBox;
+		msgBox.setText("About to fire signal.");
+		msgBox.exec();
+		emit fileModified();
 	}
 	connect(treeWidget,SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)),this,SLOT(OnItemDoubleClicked(QTreeWidgetItem*)));
 }
@@ -47,7 +58,7 @@ void ExpireAllEntriesDialog::paintEvent(QPaintEvent* event){
 }
 
 void ExpireAllEntriesDialog::resizeEvent(QResizeEvent* event){
-	createBanner(&BannerPixmap,getPixmap("alarmclock"),tr("Expired Entries in the Database"),width());
+	createBanner(&BannerPixmap,getPixmap("alarmclock"),tr("All entries expired"),width());
 	QDialog::resizeEvent(event);
 }
 
