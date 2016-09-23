@@ -77,7 +77,7 @@ void ExpireAllEntriesDialog::paintEvent(QPaintEvent* event){
 }
 
 void ExpireAllEntriesDialog::resizeEvent(QResizeEvent* event){
-	createBanner(&BannerPixmap,getPixmap("alarmclock"),tr("All entries expired"),width());
+	createBanner(&BannerPixmap,getPixmap("alarmclock"),tr("Entries expired"),width());
 	QDialog::resizeEvent(event);
 }
 

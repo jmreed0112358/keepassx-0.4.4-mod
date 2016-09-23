@@ -34,13 +34,6 @@
     </spacer>
    </item>
    <item>
-    <widget class="QLabel" name="label" >
-     <property name="text" >
-      <string>Double click on an entry to jump to it.</string>
-     </property>
-    </widget>
-   </item>
-   <item>
     <widget class="QTreeWidget" name="treeWidget" >
      <property name="rootIsDecorated" >
       <bool>false</bool>
