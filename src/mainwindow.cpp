@@ -205,7 +205,7 @@ void KeepassMainWindow::setupConnections(){
 	connect(GroupView,SIGNAL(groupChanged(IGroupHandle*)),this,SLOT(OnGroupSelectionChanged(IGroupHandle*)));
 	connect(GroupView,SIGNAL(fileModified()),this,SLOT(OnFileModified()));
 	connect(EntryView,SIGNAL(fileModified()),this,SLOT(OnFileModified()));
-	connect(ExpireAllEntriesDialog,SIGNAL(fileModified()),this,SLOT(OnFileModified()));
+	//connect(ExpireAllEntriesDialog,SIGNAL(fileModified()),this,SLOT(OnFileModified()));
 	connect(EntryView,SIGNAL(selectionChanged(SelectionState)),this,SLOT(OnEntryChanged(SelectionState)));
 	connect(GroupView,SIGNAL(searchResultsSelected()),EntryView,SLOT(OnShowSearchResults()));
 	connect(GroupView,SIGNAL(searchResultsSelected()),this,SLOT(OnShowSearchResults()));
@@ -1316,7 +1316,8 @@ void KeepassMainWindow::OnExtrasShowExpiredEntries(){
 
 void KeepassMainWindow::OnExtrasExpireAllEntries(){
 	QList<IEntryHandle*> entries = db->entries();
-	ExpireAllEntriesDialog dlg(this,db,entries);
+	ExpireAllEntriesDialog dlg(this);
+	dlg.expireEntries(db, entries);
 	if(dlg.exec()==QDialog::Accepted){
 		GroupView->setCurrentGroup(dlg.SelectedEntry->group());
 		EntryView->setCurrentEntry(dlg.SelectedEntry);

@@ -28,7 +28,8 @@
 class ExpireAllEntriesDialog:public QDialog, private Ui_ExpireAllEntriesDialog{
 	Q_OBJECT
 	public:
-		ExpireAllEntriesDialog(QWidget* parent, IDatabase* database, QList<IEntryHandle*>& Entries);
+		ExpireAllEntriesDialog(QWidget* parent);
+		void expireEntries(IDatabase* database, QList<IEntryHandle*>& Entries);
 		IEntryHandle* SelectedEntry;		
 	private:
 		QList<IEntryHandle*> Entries;

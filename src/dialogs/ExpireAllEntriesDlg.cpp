@@ -21,8 +21,11 @@
 
 #include "ExpireAllEntriesDlg.h"
 
-ExpireAllEntriesDialog::ExpireAllEntriesDialog(QWidget* parent,IDatabase* database,QList<IEntryHandle*>& Entries):QDialog(parent){
+ExpireAllEntriesDialog::ExpireAllEntriesDialog(QWidget* parent):QDialog(parent){
 	setupUi(this);
+}
+
+void ExpireAllEntriesDialog::expireEntries(IDatabase* database, QList<IEntryHandle*>& Entries) {
 	bool modified = false;
 	for(int i=0;i<Entries.size();i++){
 		if (Entries[i]->expire() != Date_Never) {
@@ -48,7 +51,6 @@ ExpireAllEntriesDialog::ExpireAllEntriesDialog(QWidget* parent,IDatabase* databa
 	}
 	connect(treeWidget,SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)),this,SLOT(OnItemDoubleClicked(QTreeWidgetItem*)));
 }
-
 
 void ExpireAllEntriesDialog::paintEvent(QPaintEvent* event){
 	QDialog::paintEvent(event);
